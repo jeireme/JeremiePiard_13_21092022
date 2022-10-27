@@ -16,12 +16,12 @@ function App() {
       <Router>
         <Routes>
           {/* public routes */}
-          <Route exact path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
+          <Route exact path="/JeremiePiard_13_21092022/" element={<Homepage />} />
+          <Route path="/JeremiePiard_13_21092022/login" element={<Login />} />
 
           {/* protected routes */}
           <Route element={<ProtectedRoutes />}>
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/JeremiePiard_13_21092022/profile" element={<Profile />} />
           </Route>
         </Routes>
       </Router>

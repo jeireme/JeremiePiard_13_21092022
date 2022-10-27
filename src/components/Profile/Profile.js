@@ -48,7 +48,7 @@ function Profile() {
   // Sign Out
   const handleLogout = (e) => {
     dispatch(setLogout());
-    navigate("/");
+    navigate("/JeremiePiard_13_21092022/");
   };
 
   // 1. Change user name and lastname
@@ -130,7 +130,7 @@ function Profile() {
       <nav className="main-nav">
         <Link
           className="main-nav-logo"
-          to="/"
+          to="/JeremiePiard_13_21092022/"
           key="homepage-link"
           onClick={handleLogout}
         >

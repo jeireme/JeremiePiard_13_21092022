@@ -24,7 +24,7 @@ function Login() {
       .then((response) => {
         dispatch(setLoginInfos(data));
         dispatch(setUserToken(response.data.body.token));
-        navigate("/profile");
+        navigate("/JeremiePiard_13_21092022/profile");
       })
       .catch((error) => {
         console.log(error);
@@ -35,7 +35,7 @@ function Login() {
   return (
     <div className="container">
       <nav className="main-nav">
-        <Link className="main-nav-logo" to="/" key="homepage-link">
+        <Link className="main-nav-logo" to="/JeremiePiard_13_21092022/" key="homepage-link">
           <img
             className="main-nav-logo-image"
             src={argentBankLogo}
@@ -44,7 +44,7 @@ function Login() {
           <h1 className="sr-only">Argent Bank</h1>
         </Link>
         <div>
-          <Link className="main-nav-item" to="/login" key="login-link">
+          <Link className="main-nav-item" to="/JeremiePiard_13_21092022/login" key="login-link">
             <FontAwesomeIcon icon={faUserCircle} className="margin" />
             Sign In
           </Link>

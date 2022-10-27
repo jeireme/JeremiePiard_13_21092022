@@ -12,7 +12,7 @@ function Homepage() {
   return (
     <div className="container">
       <nav className="main-nav">
-        <Link className="main-nav-logo" to="/" key="homepage-link">
+        <Link className="main-nav-logo" to="/JeremiePiard_13_21092022/" key="homepage-link">
           <img
             className="main-nav-logo-image"
             src={argentBankLogo}
@@ -21,7 +21,7 @@ function Homepage() {
           <h1 className="sr-only">Argent Bank</h1>
         </Link>
         <div>
-          <Link className="main-nav-item" to="/login" key="login-link">
+          <Link className="main-nav-item" to="/JeremiePiard_13_21092022/login" key="login-link">
             <FontAwesomeIcon icon={faUserCircle} className="margin" />
             Sign In
           </Link>

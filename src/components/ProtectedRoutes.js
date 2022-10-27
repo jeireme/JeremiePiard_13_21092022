@@ -11,7 +11,7 @@ const useAuth = () => {
 function ProtectedRoutes() {
   const auth = useAuth();
 
-  return auth ? <Outlet /> : <Navigate to="/login" />;
+  return auth ? <Outlet /> : <Navigate to="/JeremiePiard_13_21092022/login" />;
 }
 
 export default ProtectedRoutes;
