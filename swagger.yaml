@@ -286,26 +286,19 @@ definitions:
           transaction:
             type: object
             properties:
-              id:
+              transactionType:
                 type: string
-              date:
+              category:
                 type: string
-              description:
+              notes:
                 type: string
-              amount:
-                type: integer
-              balance:
-                type: integer
   Transaction:
     type: object
     properties:
-      id:
+      transactionType:
         type: string
-      date:
+      category:
         type: string
-      description:
+      notes:
         type: string
-      amount:
-        type: integer
-      balance:
-        type: integer
+        
