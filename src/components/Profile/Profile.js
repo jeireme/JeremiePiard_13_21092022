@@ -96,7 +96,7 @@ function Profile() {
             <input
               type="text"
               id="username"
-              placeholder={firstName}
+              defaultValue={firstName}
               className="inputUpdate"
             />
           </div>
@@ -104,7 +104,7 @@ function Profile() {
             <input
               type="text"
               id="lastname"
-              placeholder={lastName}
+              defaultValue={lastName}
               className="inputUpdate"
             />
           </div>

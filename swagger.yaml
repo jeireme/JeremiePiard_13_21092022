@@ -115,8 +115,8 @@ paths:
           description: Internal Server Error
 
 
-  /user/transactions:
-    post:
+  /user/transactions/{month}:
+    get:
       tags:
         - Transactions Module
       summary: Month Transactions API
@@ -136,10 +136,14 @@ paths:
             $ref: '#/definitions/TransactionsResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Request Lacks Valid Authentication
+        '404':
+          description: Requested Resource Not Found
         '500':
           description: Internal Server Error
   /user/transactions/{transactionId}:
-    post:
+    get:
       tags:
         - Transactions Module
       summary: Transaction Informations API
@@ -159,6 +163,10 @@ paths:
             $ref: '#/definitions/TransactionResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Request Lacks Valid Authentication
+        '404':
+          description: Requested Resource Not Found
         '500':
           description: Internal Server Error
     put:
@@ -189,8 +197,41 @@ paths:
             $ref: '#/definitions/TransactionResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Request Lacks Valid Authentication
+        '404':
+          description: Requested Resource Not Found
         '500':
           description: Internal Server Error
+    delete:
+      security:
+        - Bearer: []
+      tags:
+        - Transactions Module
+      summary: Transaction Informations API
+      description: API for updating the informations of a transaction
+      parameters:
+        - type: string
+          in: header
+          name: Authorization
+          description: Attach Bearer JWT token
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Transaction deleted successfuly
+          schema:
+            $ref: '#/definitions/TransactionDeletedResponse'
+        '400':
+          description: Invalid Fields
+        '401':
+          description: Request Lacks Valid Authentication
+        '404':
+          description: Requested Resource Not Found
+        '500':
+          description: Internal Server Error
+
 
 
 securityDefinitions:
@@ -301,4 +342,11 @@ definitions:
         type: string
       notes:
         type: string
-        
+
+  TransactionDeletedResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+      message:
+        type: string
